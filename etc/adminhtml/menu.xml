@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+        <add id="Perspective_CourseHw::perspective" title="Perspective" module="Perspective_CourseHw" sortOrder="51" resource="Perspective_CourseHw::perspective"/>
+        <add id="Perspective_CourseHw::perspective_configuration" title="Configuration" module="Perspective_CourseHw" sortOrder="99" parent="Perspective_CourseHw::perspective" action="adminhtml/system_config/edit/section/perspective" resource="Perspective_CourseHw::perspective"/>
+    </menu>
+</config>

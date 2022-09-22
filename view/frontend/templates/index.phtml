@@ -1,0 +1,17 @@
+<?php
+/** @var \Perspective\CourseHw\Block\Template $block */
+
+$viewModel = $block->getViewModel();
+
+if ($currentProduct = $viewModel->getCurrentProduct()) {
+$currentProduct->getFinalPrice() . '<br />';
+}
+echo "<br><hr>";
+if ($viewModel->isEnabled()):
+    if ($viewModel->isUAN()=='Yes'){
+            echo 'Перевод в UAN: ' . $currentProduct->getFinalPrice()*$viewModel->getCourseUAN(). ' грн.' .'<br>';}
+    if ($viewModel->isEUR()=='Yes') {    
+            echo 'Перевод в EUR: ' . $currentProduct->getFinalPrice()*$viewModel->getCourseEUR(). ' €' .'<br>';}
+    if  ($viewModel->isEUR()=='Yes') {
+            echo 'Перевод в USD: ' . $currentProduct->getFinalPrice()*$viewModel->getCourseUSD(). ' $' .'<br>';}
+endif;
